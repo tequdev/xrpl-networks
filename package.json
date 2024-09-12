@@ -1,0 +1,38 @@
+{
+  "name": "xrpl-networks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./networks": {
+      "require": "./dist/networks/index.cjs",
+      "import": "./dist/networks/index.mjs",
+      "types": "./dist/networks/index.d.ts"
+    }
+  },
+  "files": ["dist", "src"],
+  "scripts": {
+    "build": "pkgroll --clean-dist",
+    "check": "biome check src --fix"
+  },
+  "keywords": [],
+  "author": "tequ <git@tequ.dev>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tequdev/xrpl-networks.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@biomejs/biome": "^1.8.3",
+    "lefthook": "^1.7.15",
+    "pkgroll": "^2.5.0",
+    "typescript": "^5.6.2"
+  }
+}
